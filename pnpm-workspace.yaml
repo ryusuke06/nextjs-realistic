@@ -1,0 +1,9 @@
+packages:
+  - "."
+
+# pnpm 11 では従来の onlyBuiltDependencies (package.json) が削除され、
+# `allowBuilds` (この pnpm-workspace.yaml) で個別承認する形に変更された。
+# native install script を持つ依存 (sharp, unrs-resolver) は明示的に true を指定する。
+allowBuilds:
+  sharp: true
+  unrs-resolver: true
